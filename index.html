@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="navbar bg-base-100 lg:px-12 shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content  rounded-box z-1 mt-3 w-60 p-2 shadow font-medium"
+          >
+            <li ><a class="hover:bg-[#007E85] hover:text-white">Home</a></li>
+            <li>
+              <a class="hover:bg-[#007E85] hover:text-white">About us</a>
+            </li>
+            <li><a class="hover:bg-[#007E85] hover:text-white">Contact us</a></li>
+          </ul>
+        </div>
+        <img class="w-50 h-50 cursor-pointer" src="./assets/images/logo.png" alt="">
+      </div>
+      <div class="navbar-center hidden lg:flex ">
+        <ul class="menu menu-horizontal px-10 space-x-3 text-[15px] font-medium">
+          <li><a class="hover:text-[#007E85]">Home</a></li>
+          <li>
+            <a class="hover:text-[#007E85]">About us </a>
+          </li>
+          <li><a class="hover:text-[#007E85]">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end ">
+        <a class="btn text-[#007E85] ">Sign Up</a>
+      </div>
+      <div class="">
+        <a class="btn rounded-md bg-[#007E85] border-[1px] text-white hover:bg-transparent hover:text-[#007E85] hover:border-[1px] border-[#007E85]">Login</a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </body>
+</html>
