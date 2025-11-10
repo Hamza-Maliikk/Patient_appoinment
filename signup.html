@@ -16,13 +16,13 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_circle"
     />
   </head>
-  <body>
+  <body class="background_image">
     <div
       id="auth-container"
       class="w-full m-auto mt-10 max-w-md bg-white shadow-2xl rounded-xl p-8 transition-all duration-500"
     >
       <div class="mb-6">
-        <h1 class="text-4xl  text-gray-800 text-center font-semibold bg-white">
+        <h1 class="text-4xl text-center font-semibold bg-white text-[#007E85]">
           Join Us
         </h1>
         <p class="text-gray-500 text-center bg-white">
@@ -30,88 +30,64 @@
         </p>
       </div>
 
-      <!-- Success/Error Message Area -->
-      <div
-        id="message-area"
-        class="hidden px-4 py-3 rounded-lg mb-6 text-center font-medium transition-all duration-300"
-      ></div>
-
       <!-- Sign Up Form -->
-      <form id="signup-form" onsubmit="handleAuth(event)" class="space-y-6">
-        <div>
+      <form id="signupForm" class="space-y-6 bg-white">
+        <div class="bg-white">
           <label
-            for="signup-name"
-            class="block text-sm font-medium text-gray-700 mb-1"
-            >Full Name</label
+            for="name"
+            class="block text-sm font-semibold text-gray-700 mb-1 bg-white"
+            >Full name:</label
           >
           <input
             type="text"
-            id="signup-name"
+            id="name"
             name="name"
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary transition"
-            required
-            aria-describedby="signup-name-error"
+            placeholder="Enter full name"
+            class="w-full input_box px-4 py-2 bg-white border-[1px] border-[#007E85] rounded-lg focus:ring-2 focus:ring-primary transition"
           />
         </div>
 
-        <div>
+        <div class="bg-white">
           <label
             for="signup-email"
-            class="block text-sm font-medium text-gray-700 mb-1"
-            >Email Address</label
+            class="block text-sm font-semibold text-gray-700 mb-1 bg-white"
+            >Email Address:</label
           >
           <input
             type="email"
-            id="signup-email"
+            id="signup_email"
             name="email"
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary transition"
-            required
-            aria-describedby="signup-email-error"
+            placeholder="Enter email"
+            class="w-full input_box px-4 py-2 bg-white border-[1px] border-[#007E85] rounded-lg focus:ring-2 focus:ring-primary transition"
           />
         </div>
 
-        <div>
+        <div class="bg-white">
           <label
             for="signup-password"
-            class="block text-sm font-medium text-gray-700 mb-1"
+            class="block bg-white text-sm font-semibold text-gray-700 mb-1"
             >Password</label
           >
           <input
             type="password"
-            id="signup-password"
+            id="signup_password"
             name="password"
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary transition"
-            required
-            aria-describedby="signup-password-error"
-          />
-        </div>
-
-        <div>
-          <label
-            for="signup-confirm-password"
-            class="block text-sm font-medium text-gray-700 mb-1"
-            >Confirm Password</label
-          >
-          <input
-            type="password"
-            id="signup-confirm-password"
-            name="confirmPassword"
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary transition"
-            required
-            aria-describedby="signup-confirm-password-error"
+            class="w-full bg-white input_box px-4 py-2 border-[1px] border-[#007E85] rounded-lg focus:ring-2 focus:ring-primary transition"
+            placeholder="Enter password"
           />
         </div>
 
         <button
           type="submit"
-          class="w-full bg-accent hover:bg-teal-600 text-white font-semibold py-3 rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.01]"
+          class="w-full bg-[#007E85] hover:bg-teal-600 text-white hover:text-white font-semibold py-3 rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.01]"
         >
           Create Account
         </button>
       </form>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="./auth.js"></script>
+    <script type="module" src="/db.js"></script>
+    <script type="module" src="./signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </body>
 </html>
